@@ -23,7 +23,7 @@ int _erratoi(char *s)
 				return (-1);
 		}
 		else
-			return (-);
+			return (-1);
 	}
 	return (outcome);
 }
@@ -57,7 +57,7 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
-		_putchar = _eputchar;
+		__putchar = _eputchar;
 	if (input < 0)
 	{
 		_abs_ = -input;

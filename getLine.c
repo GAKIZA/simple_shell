@@ -35,12 +35,12 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 			build_history_list(info, *buf, info->histcount++);
 			if (_strchr(*buf, ';'))
 			{
-				*len = r;
+				*len = d;
 				info->cmd_buf = buf;
 			}
 		}
 	}
-	return (r);
+	return (d);
 }
 /**
  * get_input - gets a line minus the newline
@@ -62,7 +62,7 @@ ssize_t get_input(info_t *info)
 	if (len)
 	{
 		a = b;
-		q = buf + a;
+		p = buf + a;
 
 		check_chain(info, buf, &b, a, len);
 		while (b < len)
@@ -77,8 +77,8 @@ ssize_t get_input(info_t *info)
 			a = len = 0;
 			info->cmd_buf_type = CMD_NORM;
 		}
-		*buf_p = q;
-		return (_strlen(q));
+		*buf_p = p;
+		return (_strlen(p));
 	}
 	*buf_p = buf;
 	return (q);

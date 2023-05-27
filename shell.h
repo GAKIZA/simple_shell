@@ -17,7 +17,7 @@
 #define BUF_FLUSH -1
 
 #define CMD_NORM	0
-#define CDM_OR		1
+#define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
@@ -121,7 +121,7 @@ int _putsfd(char *str, int fd);
 
 int _strlen(char *);
 int _strcmp(char *, char *);
-char *starts_wit(const char *, const char *);
+char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
 char *_strcpy(char *, char *);
@@ -150,7 +150,7 @@ int _atoi(char *);
 int _erratoi(char *);
 void print_error(info_t *, char *);
 int print_d(int, int);
-char *convert_number(long int. int, int);
+char *convert_number(long int, int, int);
 void remove_comments(char *);
 
 int _myexit(info_t *);
@@ -171,6 +171,7 @@ void free_info(info_t *, int);
 char *_getenv(info_t *, const char *);
 int _myenv(info_t *);
 int _mysetenv(info_t *);
+int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
 char **get_environ(info_t *);

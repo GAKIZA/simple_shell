@@ -59,7 +59,7 @@ int _mysetenv(info_t *info)
  *	constant function prototype.
  * Return: Always 0
  */
-int _myunsetenv(inf0_t *info)
+int _myunsetenv(info_t *info)
 {
 	int y;
 
@@ -68,8 +68,8 @@ int _myunsetenv(inf0_t *info)
 		_eputs("Too few arguments. \n");
 		return (1);
 	}
-	for (i = 1; i <= info->argc; i++)
-		_unsetenv(info, info->argv[i]);
+	for (y = 1; y <= info->argc; y++)
+		_unsetenv(info, info->argv[y]);
 
 	return (0);
 }

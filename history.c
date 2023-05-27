@@ -31,7 +31,7 @@ char *get_history_file(info_t *info)
 int write_history(info_t *info)
 {
 	ssize_t fd;
-	char *fiilename = get_history_file(info);
+	char *filename = get_history_file(info);
 	list_t *node = NULL;
 
 	if (!filename)
@@ -63,7 +63,7 @@ int read_history(info_t *info)
 
 	if (!filename)
 		return (0);
-	fd = open(flename, O_RDONLY);
+	fd = open(filename, O_RDONLY);
 	free(filename);
 	if (fd == -1)
 		return (0);
